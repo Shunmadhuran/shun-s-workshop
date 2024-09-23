@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<style>
+    body{
+      background-image: url(images/atom\ logo-1.png);
+    }
+  </style>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+		<li><a href="Projects.html">projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+  <h1>Contact Me</h1>
+  <p>Feel free to reach out to me using the information below.</p>
+  <div class="contact-info-container">
+    <div class="contact-info">
+      <label for="email">Email:</label>
+      <span id="email">shaanmaadhuran@gmail.com</span>
+    </div>
+    <div class="contact-info">
+      <label for="phone">Phone:</label>
+      <span id="phone">6381657835</span>
+    </div>
+    <div class="contact-info">
+      <label for="address">Address:</label>
+      <span id="address">Dindigul, TamilNadhu, India</span>
+    </div>
+  </div>
+</main>
+  
+  <main>
+    <form id="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label>   
+
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="message">Message:</label>   
+
+      <textarea id="message" name="message" required></textarea><br><br>
+
+      <button type="submit"   
+ onclick="submitForm()">Submit</button>
+    </form>
+  </main>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault(); // Prevent default form submission behavior
+
+      // Get form data
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const   
+ message = document.getElementById("message").value;   
+
+
+      // Create a new XMLHttpRequest object
+      const xhr = new XMLHttpRequest();
+
+      // Set the request method and URL
+      xhr.open("POST",   
+ "submit.php", true);
+
+      // Set the content type header
+      xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+      // Send the form data
+      xhr.send(`name=${name}&email=${email}&message=${message}`);
+
+      // Handle response
+      xhr.onload = () => {
+        if (xhr.status === 200) {
+          alert("Your message has been sent successfully.");
+        } else {
+          alert("An error occurred. Please try again later.");
+        }
+      };
+    }
+  </script>
+
+</body>
+</html>

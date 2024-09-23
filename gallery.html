@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function openFullscreen(img) {
+      if (img.requestFullscreen) {
+        img.requestFullscreen();
+      } else if (img.webkitRequestFullscreen) { /* Safari */
+        img.webkitRequestFullscreen();
+      } else if (img.mozRequestFullscreen) { /* Firefox */
+        img.mozRequestFullscreen();
+      } else {
+        // Fallback for unsupported browsers
+        alert("Fullscreen is not supported by your browser.");
+      }
+    }
+  </script>
+</head>
+<body>
+	<style>
+    body{
+      background-image: url(images/atom\ logo-1.png);
+    }
+	.image-gallery {
+      display: flex;
+      justify-content: Center; /* Center images horizontally */
+      flex-wrap: wrap; /* Allow images to wrap to multiple lines */
+      margin-left: 0; /* Center the container horizontally */
+      max-width: 800px; /* Adjust max-width as needed */
+    }
+
+    .image-gallery img {
+      margin: 10px; /* Add spacing between images */
+      border: 1px solid #ddd; /* Add a border (optional) */
+      cursor: pointer; /* Change cursor to indicate clickability */
+    }
+  </style>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>My Gallery</h1>
+    <div class="image-gallery">
+      <img src="images/image1.png" alt="Image 1" onclick="openFullscreen(this)">
+      <img src="images/image2.png" alt="Image 2" onclick="openFullscreen(this)">
+      <img src="images/image3.png" alt="Image 3" onclick="openFullscreen(this)">
+	  <img src="images/eyelogo.png" alt="Image 4" onclick="openFullscreen(this)">
+	  <img src="images/sword.png" alt="Image 5" onclick="openFullscreen(this)">
+    </div>
+  </main>
+
+  <footer>
+  <p>Contact Information:</p>
+  <ul>
+    <li>Email: shaanmaadhuran@gmail.com</li>
+    <li>Phone: 6381657835</li>
+    <li>Address: Dindigul, TamilNadhu, India</li>
+  </ul>
+</footer>
+</body>
+</html>

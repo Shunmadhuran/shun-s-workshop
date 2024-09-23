@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Projects</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Optional styling for video containers (adjust as needed) */
+    .video-projects video {
+      margin: 10px; /* Add spacing between videos */
+      border: 1px solid #ddd; /* Add a subtle border */
+    }
+  </style>
+</head>
+<body>
+	<style>
+    body{
+      background-image: url(images/atom\ logo-1.png);
+    }
+	.video-projects {
+      display: flex;
+      justify-content: center; /* Center videos horizontally */
+      flex-wrap: wrap; /* Allow videos to wrap to multiple lines */
+      margin-left: 0; /* Center the container horizontally */
+      max-width: 800px; /* Adjust max-width as needed */
+    }
+  </style>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>My Projects</h1>
+    <div class="video-projects">
+      <video width="320" height="240" controls onclick="this.requestFullscreen()">
+        <source src="videos/project1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video width="320" height="240" controls onclick="this.requestFullscreen()">
+        <source src="videos/project2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video width="320" height="240" controls onclick="this.requestFullscreen()">
+        <source src="videos/project3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </main>
+
+  <footer>
+  <p>Contact Information:</p>
+  <ul>
+    <li>Email: shaanmaadhuran@gmail.com</li>
+    <li>Phone: 6381657835</li>
+    <li>Address: Dindigul, TamilNadhu, India</li>
+  </ul>
+</footer>
+</body>
+</html>
